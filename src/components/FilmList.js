@@ -1,18 +1,31 @@
 import React from 'react';
+import FilmInfo from '../containers/FilmInfo.js'
 
 const FilmList = (props) => {
 
-  const films = props.films.map((film) => {
-    <li>
-      
+  const films = props.films.map((film, index) => {
+    <li key= {index} className="film-info">
+      <FilmInfo film={film}/>
     </li>
   })
 
   return (
-    <ul>
+    <div>
+      <ul classname="film-list">
+        {films}
+      </ul>
+      <button className="show-button">{showButtonText(films.length)}</button>
+    </div>
 
-    </ul>
   );
-}
+};
 
 export default FilmList;
+
+function showButtonText(numFilms) {
+  if(numFilms <= 3){
+    return `more options`;
+  } else {
+    return `fewer options`;
+  }
+}

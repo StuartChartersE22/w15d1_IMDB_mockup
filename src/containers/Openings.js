@@ -14,7 +14,7 @@ class Openings extends React.Component {
       <div className="openings">
         <h1>Openings</h1>
         <FilmList films={filmsToShow(this.state.showMore, this.props.films)}/>
-        <button>{showButtonText}</button>
+        <button>Get showtimes</button>
       </div>
     );
   }
