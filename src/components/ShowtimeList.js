@@ -2,14 +2,25 @@ import React from 'react';
 
 const ShowtimeList = (props) => {
 
-  let showTimes;
+  const showtimes = props.times.map((time, index) => {
+    return <li key={index}>{time}</li>;
+  });
+
   if(props.show){
-    showTimes = <ul>
-      
-    </ul>
+    return (
+      <div>
+        <ul>
+          {showtimes}
+        </ul>
+        <button>Hide showtimes</button>
+      </div>
+    );
+  } else {
+    return (
+      <button>Display showtimes</button>
+    );
   }
 
-  return (
-
-  );
 }
+
+export default ShowtimeList;

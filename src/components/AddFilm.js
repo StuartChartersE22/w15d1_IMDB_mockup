@@ -8,7 +8,7 @@ const AddFilm = (props) => {
 
 export default AddFilm;
 
-function functionName(added) {
+function addButtonText(added) {
   if(added){
     return 'Remove';
   } else {
