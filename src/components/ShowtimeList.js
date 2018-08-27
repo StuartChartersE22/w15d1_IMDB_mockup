@@ -12,12 +12,12 @@ const ShowtimeList = (props) => {
         <ul>
           {showtimes}
         </ul>
-        <button>Hide showtimes</button>
+        <button onClick={props.action}>Hide showtimes</button>
       </div>
     );
   } else {
     return (
-      <button>Display showtimes</button>
+      <button onClick={props.action}>Display showtimes</button>
     );
   }
 

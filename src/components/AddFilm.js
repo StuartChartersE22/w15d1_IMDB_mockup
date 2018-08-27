@@ -1,10 +1,13 @@
 import React from 'react';
 
-const AddFilm = (props) => {
-  return (
-    <button>{addButtonText(props.added)}</button>
-  );
-};
+class AddFilm extends React.Component {
+
+  render() {
+    return (
+      <button onClick={this.props.action} >{addButtonText(this.props.added)}</button>
+    );
+  }
+}
 
 export default AddFilm;
 

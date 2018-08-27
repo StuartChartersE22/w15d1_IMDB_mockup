@@ -14,7 +14,7 @@ const FilmList = (props) => {
       <ul className="film-list">
         {films}
       </ul>
-      <button className="show-button">{showButtonText(films.length)}</button>
+      <button className="show-button" onClick={props.action}>{showButtonText(films.length)}</button>
     </div>
 
   );
@@ -23,7 +23,6 @@ const FilmList = (props) => {
 export default FilmList;
 
 function showButtonText(numFilms) {
-  console.log(numFilms);
   if(numFilms <= 3){
     return `more options`;
   } else {
