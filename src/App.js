@@ -39,7 +39,7 @@ class App extends Component {
     ];
 
     return (
-      <Openings/>
+      <Openings films={films}/>
     );
 
   }

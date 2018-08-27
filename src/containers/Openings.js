@@ -24,8 +24,8 @@ export default Openings
 
 function filmsToShow(showMore, films) {
   if(showMore){
-    return films.slice(0,2);
-  }else {
     return films;
+  }else {
+    return films.slice(0,3);
   }
 }

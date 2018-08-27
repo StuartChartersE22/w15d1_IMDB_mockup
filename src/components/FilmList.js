@@ -4,14 +4,14 @@ import FilmInfo from '../containers/FilmInfo.js'
 const FilmList = (props) => {
 
   const films = props.films.map((film, index) => {
-    <li key= {index} className="film-info">
+    return <li key= {index} className="film-info">
       <FilmInfo film={film}/>
-    </li>
-  })
+    </li>;
+  });
 
   return (
     <div>
-      <ul classname="film-list">
+      <ul className="film-list">
         {films}
       </ul>
       <button className="show-button">{showButtonText(films.length)}</button>
@@ -23,6 +23,7 @@ const FilmList = (props) => {
 export default FilmList;
 
 function showButtonText(numFilms) {
+  console.log(numFilms);
   if(numFilms <= 3){
     return `more options`;
   } else {
